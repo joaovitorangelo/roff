@@ -1,0 +1,517 @@
+/* 
+Theme Name: Hello Elementor Child
+Theme URI: https://github.com/elementor/hello-theme-child/
+Description: Hello Elementor Child is a child theme of Hello Elementor, created by Elementor team
+Author: Elementor Team
+Author URI: https://elementor.com/
+Template: hello-elementor
+Version: 2.0.0
+Text Domain: hello-elementor-child
+License: GNU General Public License v3 or later.
+License URI: https://www.gnu.org/licenses/gpl-3.0.html
+Tags: flexible-header, custom-colors, custom-menu, custom-logo, editor-style, featured-images, rtl-language-support, threaded-comments, translation-ready
+*/
+
+/* Add your custom styles here */
+.check-calculator a { color: #164973 !important; }
+.your-company {
+  font-size: 12px;
+  font-family: 'Roboto Serif';
+  font-weight: 800;
+  color: #292E43;
+  padding: 5px;
+  border-radius: 5px;
+  background: #ffffff;
+}
+.label-document-infos { display: none; }
+/* Header - <li>Acesso</li> */
+body.logged-in .header-access-btn a {
+  color: #164973 !important;
+  background-color: #ffffff;
+}
+.header-access-btn {
+  display: flex;
+  align-items: center;
+  a {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background-color: #292E43;
+    border-radius: 5px;
+    width: 99px;
+    height: 32px;
+  }
+}
+/* . */
+/* Categoria do Post */
+.post-category {
+  .elementor-widget-container{ padding: 0 !important; }
+  span {
+    display: flex;
+    gap: 1rem;
+    a {
+      font-family: "Roboto Serif", Sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      line-height: 22px;
+      padding: 0 6px 0 6px;
+      color: #ffffff !important;
+      background: #164973;
+      border-radius: 5px;
+      text-align: center;
+      color: #ffffff;
+    }
+    a:hover {
+      background-color: #164973E3;
+      transition: .3s ease-in-out;
+    }
+  }
+}
+/* . */
+/* Accordion da página inicial */
+.accordion {
+  .elementor-accordion-item {
+    ul { width: 60%; }
+  }
+}
+/* . */
+/* Formulário de contato */
+#contact_form {
+  .elementor-field-group {
+    display: flex;
+    align-items: start;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-radius: 10px;
+  } 
+  label {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    margin: 7px 7px 0 0;
+    width: 44%;
+  }
+  span {
+    display: flex;
+    justify-content: end;
+    input {
+      width: 16px; 
+      margin: 0 10px 28px 0;
+    }
+  }
+  .elementor-field-group-auth_mail {
+    label {
+      width: 63%; 
+      font-size: 14px;
+      line-height: 18px;
+      font-style: italic;
+      font-weight: 300;
+    }
+  }
+}
+/* . */
+/* Formulário de simulação */
+#simule_form {
+  .elementor-form-fields-wrapper {
+    /* display: block; */
+    /* label { margin-right: 10px; } */
+    .elementor-field-group-simuleName,
+    /* .elementor-field-group-simuleMail { padding-left: 12px; } */
+    /* .elementor-field-group-concreteType { padding-left: 4px; } */
+    /* .elementor-field-group-totalArea { padding-left: 15px; } */
+    /* .elementor-field-group-poolDiscovery { padding-left: 38px; } */
+    .elementor-field-group {
+      /* display: flex;
+      flex-wrap: nowrap;
+      width: 100%;
+      label {
+        width: 50%;
+        text-align: end;
+        white-space: nowrap;
+      } */
+      input, select {
+        border-radius: 5px;
+        border: none;
+      }
+    }
+  } 
+  /* .m { 
+    font-family: 'Roboto Slab';
+    font-size: 16px;
+    font-weight: 300;
+    margin-left: 10px; 
+    padding-right: 235px;
+  } */
+  button { 
+    margin-top: 10px;
+    padding: 0;
+    span { font-size: 15px; }
+  }
+}
+/* . */
+/* Blog Archive */
+/* Veja os conteúdos por categoria */
+.tags-container {
+  height: 215px;
+  overflow-y: auto; 
+  overflow-x: hidden; 
+  scrollbar-width: thin;
+  scrollbar-color: #88888817 #f1f1f100;
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px 0;
+    width: 300px;
+    /* height: 190px; */
+    padding: 0;
+    list-style: none;
+    li {
+      a {
+        font-family: "Roboto Serif", Sans-serif;
+        font-weight: 800;
+        font-size: 12px;
+        line-height: 22px;
+        padding: 4px 6px 4px 6px;
+        color: #ffffff !important;
+        background: #164973;
+        border-radius: 5px;
+        text-align: center;
+        color: #ffffff;
+        &:hover {
+          background-color: #164973E3;
+          transition: .3s ease-in-out;
+        }
+      }
+    }
+  }
+}
+/*  */
+/* Smaller Post Card Loop - "Todos os conteúdos" de Blog Archive */
+.smaller-post-card-loop {
+  .elementor-pagination {
+    display: flex;
+    gap: 10px;
+    text-align: start !important;
+    .page-numbers {
+      display: inline-block;
+      font-family: 'Roboto Serif';
+      font-size: 20px;
+      font-weight: 600;
+      color: #BABABA;
+      border-radius: 5px;
+      border: 1px solid #BABABA;
+      line-height: 30px;
+      padding: 0 8px 0 8px;
+      text-align: center;
+      cursor: pointer;
+      &.current {
+        background-color: #bababa;
+        color: #ffffff;
+      }
+      &.prev:hover, 
+      &.next:hover {
+        color: #E8E8E8; 
+        border: 1px solid #E8E8E8; 
+      }
+    }
+  }
+} 
+.line-on-pagination {
+  content: '';
+  background-color: #bababa;
+  height: 1px;
+  color: #ffffff00;
+  margin-top: 15px;
+  width: 100%;
+}
+/*  */
+/* Formulário de login para acesso */
+.access-form {
+  .elementor-field-group {
+    display: flex;
+    align-items: start;
+    flex-wrap: nowrap;
+    width: 100%;
+    border-radius: 10px;
+  } 
+  label {
+    display: flex;
+    align-items: start;
+    justify-content: end;
+    margin: 7px 7px 0 0;
+    width: 44%;
+  }
+}
+.documents-pagination {
+  .elementor-pagination {
+    display: flex;
+    justify-content: end;
+    gap: 10px;
+    text-align: start !important;
+    .page-numbers {
+      display: inline-block;
+      font-family: 'Roboto Serif';
+      font-size: 20px;
+      font-weight: 600;
+      color: #BABABA;
+      border-radius: 5px;
+      border: 1px solid #BABABA;
+      line-height: 30px;
+      padding: 0 8px 0 8px;
+      text-align: center;
+      cursor: pointer;
+      &.current {
+        background-color: #bababa;
+        color: #ffffff;
+      }
+      &.prev:hover, 
+      &.next:hover {
+        color: #E8E8E8; 
+        border: 1px solid #E8E8E8; 
+      }
+    }
+  }
+}
+.text-document-pagination {
+  font-family: "Roboto Slab", Sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #A8A8A8;
+  width: 100%;  
+}
+.not-exist-document {
+  font-family: "Roboto Slab", Sans-serif;
+  font-size: 16px;
+  color: #A8A8A8;
+  font-weight: 300;
+  i {
+    font-size: 15px;
+    padding: 8px 10px;
+    background: #a8a8a83b;
+    border-radius: 50%;
+  }
+}
+.menu-mobile {
+  .elementor-item.elementor-item-anchor {
+    border-top: 2px solid #D9D9D9;
+  }
+  .header-access-btn {
+    display: flex;
+    justify-content: center;
+    border-top: 2px solid #D9D9D9;
+    padding-top: 15px;
+    a {
+      display: flex;
+      justify-content: center;
+      gap: 10px;
+      background-color: #292E43 !important;
+      border-radius: 5px;
+      width: 99px;
+      height: 32px;
+      span, i { color: #ffffff; }
+    }
+  }
+}
+/* Select da página de documentos */
+#form_documents {
+  display: none;
+  align-items: center;
+  gap: 8px;
+  label {
+    font-family: 'Roboto Slab';
+    font-size: 14px;
+    font-weight: 700;
+    color: #909090;
+  }
+  select {
+    font-family: 'Roboto Slab';
+    font-size: 14px;
+    font-weight: 700;
+    color: #909090;
+    background-color: transparent;
+    border-radius: 10px;
+    border: 1px solid #BABABA;
+    padding: 6px 16px 6px 16px;
+    width: 175px;
+  }
+}
+/* Input file */
+.document-form-container {
+  .elementor-widget-container {
+    display: flex;
+    flex-direction: row;
+    #document_form {
+      width: 50%;
+      input[type="file"] {
+        opacity: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        cursor: pointer;
+      }
+      label[for="form-field-document_archive"] {
+        width: 100%;
+        height: 250px;
+        aspect-ratio: 16/9;
+        background: #ddd;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #aaa;
+        border: 2px dashed currentcolor;
+        cursor: pointer;
+        border-radius: 5px;
+        position: relative;
+        i {
+          padding: 20px;
+          background: #c5c5c56b;
+          font-size: 45px;
+          border-radius: 100px;
+        }
+      }
+    }
+  }
+}
+.filesDiv {
+  height: 500px;
+  margin-left: 50px;
+  overflow-x: hidden; 
+  overflow-y: auto; 
+  scrollbar-width: thin;
+  scrollbar-color: #88888826 #f1f1f1;
+  .files {
+    border: 1px solid #000;
+    border-radius: 10px;
+    padding: 10px;
+    list-style: none;
+    .title {
+      font-family: "Roboto Slab", Sans-serif;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 16px;
+      color: #000;
+      list-style: none;
+      padding: 0px 0px 10px 0;
+    }
+    li {
+  
+    }
+  }
+}
+/* Alert */
+.alert-container.success{
+  .dialog-widget-content {
+    background-color: #00800038 !important;
+    border: 1px solid green !important;
+  }
+  .elementor-icon-list-text { color: green !important; }
+  .elementor-icon-list-icon svg { fill: green !important; }
+}
+.alert-container.error {
+  .dialog-widget-content {
+    background-color: #a52a2a42 !important;
+    border: 1px solid brown !important;
+  }
+  .elementor-icon-list-text { color: brown !important; }
+  .elementor-icon-list-icon svg { fill: brown !important; }
+}
+@media (max-width: 768px) {
+  .receipt-table-item-container {
+    .elementor-heading-title {
+      display: flex;
+      /* gap: 10px; */
+      .label-document-infos { 
+        display: flex; 
+        width: 95px;
+        /* margin-left: 35px; */
+        font-family: 'Roboto Slab';
+        font-weight: 300;
+        font-size: 12px;
+        color: #909090;
+      }
+    }
+  }
+  #simule_form {
+    .elementor-form-fields-wrapper {
+      /* display: block;
+      label { margin-right: 0; }
+      .elementor-field-group-simuleName,
+      .elementor-field-group-simuleMail { padding-left: 0; }
+      .elementor-field-group-concreteType {
+        padding-left: 0;
+      } */
+      /* .elementor-field-group-totalArea {
+        display: block !important;
+        padding-left: 0;
+        label { width: 100% !important; }
+        input { width: 80px !important;}
+        .m {
+          padding: 0;
+        }
+      } */
+      /* .elementor-field-group-poolDiscovery {
+        display: block !important;
+        padding-left: 0;
+        label { width: 100% !important; }
+        input { width: 80px !important;}
+        .m {
+          padding: 0;
+        }
+      } */
+      /* .elementor-field-group {
+        display: flex;
+        flex-wrap: wrap;
+        width: 100%;
+        padding: 0;
+        label {
+          width: 50%;
+          text-align: start;
+          white-space: nowrap;
+        }
+      } */
+    } 
+  }
+  button {
+    padding: 10px !important;
+    span.elementor-button-text {
+      width: 93%;
+      text-align: start;
+    }
+  }
+  .contact-form-container {
+    #contact_form {
+      .elementor-field-group {
+        flex-wrap: wrap;
+        label { justify-content: start; }
+        span {
+          justify-content: start;
+          label { width: 85%; }
+          input { margin: 0 10px 50px 0; }
+        }
+      }        
+    }
+  }
+  #form_documents {
+    display: flex;
+    padding: 5px 10px 15px 10px;
+  }
+  .document-form-container {
+    .elementor-widget-container {
+      flex-direction: column;
+      #document_form {
+        width: 100%;
+        input[type="file"] { width: 100%; }
+        label[for="form-field-document_archive"] {
+          width: 100%;
+          height: 150px;
+        }
+      }
+    }
+  }
+  .filesDiv {
+    height: 200px;
+    margin: 20px 0;
+  }
+}
